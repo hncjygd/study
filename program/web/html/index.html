@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>目录</p>
+    <ol>
+        <li>
+            <a href="#htmlstudy">HTML学习</a>
+            <ol>
+                <li>
+                    <a href="#p">段落</a>
+                </li>
+                <li>
+                    <a href="#image">图像学习</a>
+                </li>
+                <li>
+                    <a href="#a">链接学习</a>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <h1 id="htmlstudy">html标签学习</h1>
+    <hr>
+    <h2 id="p">段落</h2>
+    <!--br标签用于在不想产生一个段落的情况下分行-->
+    <p>p标签用于定义段落。<br>br标签用于在段落中分行。</p>
+
+    <h2 id="image">图像学习</h2>
+    <img src="https://www.baidu.com/img/xinshouyedong_4f93b2577f07c164ae8efa0412dd6808.gif" alt="百度图片">
+
+    <h2 id="a">链接学习</h2>
+    <p>
+        <a href="http://www.baidu.com" target="_blank">
+            <img src="https://www.baidu.com/img/xinshouyedong_4f93b2577f07c164ae8efa0412dd6808.gif" alt="">
+        </a>
+    </p>
+
+    <h2>无序列表</h2>
+    <ul>
+        <li>
+            <p>蔬菜</p>
+            <ul>
+                <li>白菜</li>
+                <li>萝卜</li>
+                <li>黄瓜</li>
+            </ul>
+        </li>
+        <li>
+            <p>水果</p>
+            <ul>
+                <li>苹果</li>
+                <li>桃子</li>
+                <li>香蕉</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>定义列表</h2>
+    <dl>
+        <dt>北京</dt>
+        <dd>中国的首都</dd>
+        <dt>香港</dt>
+        <dd>中国的特别行政区</dd>
+    </dl>
+    <h2>表格</h2>
+    <table border="1px" width="300px">
+        <caption>工作表格</caption>
+        <thead>
+            <tr>
+                <th>项目</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">数据</td>
+                <td>张三</td>
+                <td>22</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>21</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>23</td>
+                <td>60</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">平均分</td>
+                <td>70</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>表单</h2>
+    <form action="http://www.baidu.com">
+        <!-- text输入类型定义供文本输入的单行输入字段
+        可以通过value属性来添加默认值 -->
+        <!-- label 如果直接写文字，该文字与输入框是没有任何内在联系的，虽然他们看着在一行，例如你点击文字并不会激活输入框。要想实现点击文字激活输入框就需要将其绑定到一个label标签中
+        1.给需要绑定的input标签中定义一个id属性
+        2.在lebel标签中通过for属性等于input的id属性值即可绑定 -->
+        <label for="accout">帐号：</label><input type="text" id="accout"><br>
+        <!-- password 密码输入框
+        可以通过value属性来添加默认值 -->
+        密码：<input type="password"><br>
+        <!-- radio单选框，
+        默认情况下单选框并不互相排斥，要想互斥必须设置name属性且属性值相同 
+        可以使用checked属性来设置默认值，checked的值就是 "checked"所以可以不用写，如果写多个checked的情况下默认选择最后面的 -->
+        性别：
+        <input type="radio" name="gender" checked="checked">男
+        <input type="radio" name="gender">女
+        <input type="radio" name="gender">保密 <br>
+        <!-- checkbox 多选框 
+        可以选择多个，也可以使用checked默认多个选择-->
+        爱好：
+        <input type="checkbox">篮球
+        <input type="checkbox">足球
+        <input type="checkbox">排球
+        <!-- button 定义一个按钮，通过value属性定义按钮上的文字，主要用于配合js完成一些操作 -->
+        <input type="button" value="注册" onclick="alert('注册成功')"> <br>
+        <!-- datalist 给输入框绑定待选项，类似与百度中的联想输入
+        datalist需要与一个input绑定才可以使用，通过input中的list属性  
+        datalist并不是强制的，你也可以在input中输入任何值 -->
+        毕业院校：
+        <input type="text" list="school"> <br>
+        <datalist id="school">
+            <option>北京大学</option>
+            <option>清华大学</option>
+            <option>复旦大学</option>
+        </datalist>
+        <!-- select标签，下拉列表 
+        他不是一个input标签的属性而是一个新的标签，其不能输入，只能在你的option标签中的文字中选择-->
+        选择你的地址：
+        <select>
+            <option>北京</option>
+            <option>上海</option>
+            <option selected="selected">武汉</option>
+        </select> <br>
+        <!-- textarea标签，定义一个多行输入框
+        1.默认情况下输入框可以无限输入
+        2.默认情况下有固定大小可以通过cols来设置宽rows来设置高度 -->
+        自我介绍：
+        <textarea cols="30" rows="10"></textarea> <br>
+        <!-- submit 提交数据按钮，默认value值就是提交，
+            其作用是将保单中的数据提交到远程服务器，其需要满足两个条件：
+        1.告诉表单需要将数据提交到哪个服务器：通过在form标签中定义action属性来实现
+        2.告诉表单那些数据需要提交：通过在需要提交的表单元素中添加name属性，任何有name属性的表单元素中输入的内容都将被提交 -->
+        <!-- reset 重置按钮，不设置value值的情况下默认显示重置文字，其作用用于清空表单中的数据 -->
+        <input type="submit">
+        <input type="reset">
+        <!-- hidden隐藏域 用于在用户不知觉的情况下上传一些数据，主要用来搜集用户数据，他在页面中没有表现形式是隐藏的 -->
+        <!-- h5中提供了一些type类型， email url number color等用于检查输入相应的内容的，但是由于ie很多不支持所以兼容性并不强 -->
+    </form>
+</body>
+</html>
