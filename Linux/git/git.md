@@ -619,3 +619,5 @@ deploy_key_rsa
 ```
 最后我们把.gitignore一起提交给Git，就完成了。   
 定义完.gitignore文件后，如果执行git add mypython.so会发现报错，原因是这个文件被.gitignore忽略了。如果你确定需要添加该文件，可以用-f强制添加到Git。
+
+
