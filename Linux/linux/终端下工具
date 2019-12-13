@@ -1,0 +1,20 @@
+ 
+# 命令行截图工具
+
+## 安装
+
+> sudo pacman -S scrot
+
+## 使用说明
+
+> scrot #截取整个屏幕并保存在当前文件夹下面  
+> scrot ~/Pictures/my_desktop.png   #可以直接指定保存位置  
+> scrot -s ~/Pictures/my_area.png   #可以框选截图区域
+
+# 终端下字体装换
+
+figlet 
+
+# 截图工具
+
+deepin-screenshot   绑定快捷键 win+s
